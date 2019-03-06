@@ -1,4 +1,4 @@
 FROM archlinux/base
 
-RUN pacman -Syu
+RUN pacman --noconfirm -Syu
 RUN pacman --noconfirm -S python3 && ln -sf /usr/bin/python3 /usr/bin/python
