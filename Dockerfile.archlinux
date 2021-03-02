@@ -1,4 +1,6 @@
-FROM archlinux/base
+FROM iterait/archlinux:latest
 
-RUN pacman --noconfirm -Syu
-RUN pacman --noconfirm -S python3 && ln -sf /usr/bin/python3 /usr/bin/python
+RUN pacman --noconfirm -Syu && \
+  pacman --noconfirm -S python3 && \
+  ln -sf /usr/bin/python3 && \
+  pacman -Sccc --noconfirm
